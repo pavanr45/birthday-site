@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Happy Birthday</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h1>🎂 Happy Birthday 🎂</h1>
+
+  <div class="candle">
+    <img src="assets/cake.jpg" alt="Cake" class="candle-img">
+  </div>
+
+  <button onclick="toggleBirthdaySong()">Play Birthday Song</button>
+  <audio id="birthdayAudio" src="assets/happy-birthday.mp3"></audio>
+
+  <hr style="margin: 50px 0; border-color: hotpink;">
+
+  <!-- 🎁 Memories -->
+  <section class="memories">
+
+    <div class="memory">
+      <img src="assets/mem1.jpg" alt="Memory 1">
+      <button onclick="playMemorySong(1)">Play Song 1</button>
+      <audio id="memoryAudio1" src="assets/song1.mp3"></audio>
+    </div>
+
+    <div class="memory">
+      <img src="assets/mem2.jpg" alt="Memory 2">
+      <button onclick="playMemorySong(2)">Play Song 2</button>
+      <audio id="memoryAudio2" src="assets/song2.mp3"></audio>
+    </div>
+
+    <div class="memory">
+      <img src="assets/mem3.jpg" alt="Memory 3">
+      <button onclick="playMemorySong(3)">Play Song 3</button>
+      <audio id="memoryAudio3" src="assets/song3.mp3"></audio>
+    </div>
+
+    <hr style="margin: 50px 0; border-color: hotpink;">
+
+    <!-- 🎬 Videos -->
+    <div class="videos">
+      <video src="assets/video1.mp4" controls></video>
+      <video src="assets/video2.mp4" controls></video>
+      <video src="assets/video3.mp4" controls></video>
+    </div>
+
+  </section>
+
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+  <script src="script.js"></script>
+
+</body>
+</html>
