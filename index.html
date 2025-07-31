@@ -3,54 +3,321 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>Happy Birthday</title>
+  <title>🎉 Happy Birthday Mahi! 🎉</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <h1>🎂 Happy Birthday 🎂</h1>
-
-  <div class="candle">
-    <img src="assets/cake.jpg" alt="Cake" class="candle-img">
+  <!-- Theme Selector -->
+  <div class="theme-selector">
+    <button onclick="changeTheme('pink')" class="theme-btn pink-theme">💖</button>
+    <button onclick="changeTheme('blue')" class="theme-btn blue-theme">💙</button>
+    <button onclick="changeTheme('purple')" class="theme-btn purple-theme">💜</button>
+    <button onclick="changeTheme('green')" class="theme-btn green-theme">💚</button>
+    <button onclick="changeTheme('rainbow')" class="theme-btn rainbow-theme">🌈</button>
   </div>
 
-  <button onclick="toggleBirthdaySong()">Play Birthday Song</button>
-  <audio id="birthdayAudio" src="assets/happy-birthday.mp3"></audio>
+  <h1>🎂 Happy Birthday Mahi! 🎂</h1>
 
-  <hr style="margin: 50px 0; border-color: hotpink;">
+  <div class="birthday-intro">
+    <h2>🎉 Welcome to Your Special Day! 🎉</h2>
+    <p>Today is all about celebrating YOU! Get ready for an amazing journey through our beautiful memories together. Make a wish and blow out the candle! ✨</p>
+  </div>
 
-  <!-- 🎁 Memories -->
+  <div class="candle" onclick="blowCandle()">
+    <img src="assets/cake.jpg" alt="Birthday Cake" class="candle-img">
+    <div id="candle-flame"></div>
+  </div>
+
+  <div class="main-controls">
+    <button class="btn btn-primary" onclick="toggleBirthdaySong()">🎵 Play Birthday Song</button>
+    <button class="btn btn-secondary" onclick="createConfettiShow()">🎊 Confetti Party!</button>
+    <button class="btn btn-primary" onclick="stopAllMedia()">⏹️ Stop All</button>
+  </div>
+
+  <audio id="birthdayAudio" src="assets/happy-birthday.mp3" loop></audio>
+  <audio id="blowAudio" src="assets/blow.mp3"></audio>
+
+ <!-- Special Slideshow Memories Section -->
+<section class="slideshow-memories">
+  <h2>🎭 Special Memory Slideshow</h2>
+  <div class="slideshow-container">
+    <div class="slideshow-wrapper">
+
+      <!-- Slide 1 -->
+      <div class="slide active">
+        <img src="assets/slide1.jpg" alt="Special Memory 1">
+        <div class="slide-caption">Our Amazing Adventure Together! 🌟</div>
+      </div>
+
+      <!-- Slide 2 -->
+      <div class="slide">
+        <img src="assets/slide2.jpg" alt="Special Memory 2">
+        <div class="slide-caption">Unforgettable Moments of Joy! 💖</div>
+      </div>
+
+      <!-- Slide 3 -->
+      <div class="slide">
+        <img src="assets/slide3.jpg" alt="Special Memory 3">
+        <div class="slide-caption">Making Beautiful Memories! ✨</div>
+      </div>
+
+      <!-- Slide 4 -->
+      <div class="slide">
+        <img src="assets/slide4.jpg" alt="Special Memory 4">
+        <div class="slide-caption">Friendship Forever! 🎈</div>
+      </div>
+
+      <!-- Slide 5 -->
+      <div class="slide">
+        <img src="assets/slide5.jpg" alt="Special Memory 5">
+        <div class="slide-caption">Always Smiling Together! 😄</div>
+      </div>
+
+      <!-- Slide 6 to 33 -->
+      <div class="slide">
+        <img src="assets/slide6.jpg" alt="Special Memory 6">
+        <div class="slide-caption">Another Beautiful Day! 🌸</div>
+      </div>
+
+      <div class="slide">
+        <img src="assets/slide7.jpg" alt="Special Memory 7">
+        <div class="slide-caption">Laughs That Last Forever! 😂</div>
+      </div>
+
+      <div class="slide">
+        <img src="assets/slide8.jpg" alt="Special Memory 8">
+        <div class="slide-caption">A Magical Sunset Together! 🌅</div>
+      </div>
+
+      <div class="slide">
+        <img src="assets/slide9.jpg" alt="Special Memory 9">
+        <div class="slide-caption">Cherishing Every Moment! 💕</div>
+      </div>
+
+      <div class="slide">
+        <img src="assets/slide10.jpg" alt="Special Memory 10">
+        <div class="slide-caption">Golden Memories! 🏆</div>
+      </div>
+
+      <div class="slide">
+        <img src="assets/slide11.jpg" alt="Special Memory 11">
+        <div class="slide-caption">The Fun Never Ends! 🎉</div>
+      </div>
+
+      <div class="slide">
+        <img src="assets/slide12.jpg" alt="Special Memory 12">
+        <div class="slide-caption">Beach Day Happiness! 🏖️</div>
+      </div>
+
+      <div class="slide">
+        <img src="assets/slide13.jpg" alt="Special Memory 13">
+        <div class="slide-caption">Hearts Full of Joy! ❤️</div>
+      </div>
+
+      <div class="slide">
+        <img src="assets/slide14.jpg" alt="Special Memory 14">
+        <div class="slide-caption">Adventure Awaits! 🗺️</div>
+      </div>
+
+      <div class="slide">
+        <img src="assets/slide15.jpg" alt="Special Memory 15">
+        <div class="slide-caption">Sunshine and Smiles! 🌞</div>
+      </div>
+
+      <div class="slide">
+        <img src="assets/slide16.jpg" alt="Special Memory 16">
+        <div class="slide-caption">Our Best Moments Together! 💫</div>
+      </div>
+
+      <div class="slide">
+        <img src="assets/slide17.jpg" alt="Special Memory 17">
+        <div class="slide-caption">Beautiful Memories Forever! 🌼</div>
+      </div>
+
+      <div class="slide">
+        <img src="assets/slide18.jpg" alt="Special Memory 18">
+        <div class="slide-caption">Joy in Little Things! 🍀</div>
+      </div>
+
+      <div class="slide">
+        <img src="assets/slide19.jpg" alt="Special Memory 19">
+        <div class="slide-caption">Smiles That Shine Bright! 😍</div>
+      </div>
+
+      <div class="slide">
+        <img src="assets/slide20.jpg" alt="Special Memory 20">
+        <div class="slide-caption">Every Day a Celebration! 🎂</div>
+      </div>
+
+      <div class="slide">
+        <img src="assets/slide21.jpg" alt="Special Memory 21">
+        <div class="slide-caption">Peaceful Moments Together! 🕊️</div>
+      </div>
+
+      <div class="slide">
+        <img src="assets/slide22.jpg" alt="Special Memory 22">
+        <div class="slide-caption">The Best Days of Life! 🌟</div>
+      </div>
+
+      <div class="slide">
+        <img src="assets/slide23.jpg" alt="Special Memory 23">
+        <div class="slide-caption">Happiness Captured Forever! 📸</div>
+      </div>
+
+      <div class="slide">
+        <img src="assets/slide24.jpg" alt="Special Memory 24">
+        <div class="slide-caption">Exploring New Places! 🚗</div>
+      </div>
+
+      <div class="slide">
+        <img src="assets/slide25.jpg" alt="Special Memory 25">
+        <div class="slide-caption">Good Times and Laughter! 😆</div>
+      </div>
+
+      <div class="slide">
+        <img src="assets/slide26.jpg" alt="Special Memory 26">
+        <div class="slide-caption">Hugs and Happiness! 🤗</div>
+      </div>
+
+      <div class="slide">
+        <img src="assets/slide27.jpg" alt="Special Memory 27">
+        <div class="slide-caption">A Story to Remember! 📖</div>
+      </div>
+
+      <div class="slide">
+        <img src="assets/slide28.jpg" alt="Special Memory 28">
+        <div class="slide-caption">Bright Days Ahead! 🌈</div>
+      </div>
+
+      <div class="slide">
+        <img src="assets/slide29.jpg" alt="Special Memory 29">
+        <div class="slide-caption">The Journey Continues! 🚀</div>
+      </div>
+
+      <div class="slide">
+        <img src="assets/slide30.jpg" alt="Special Memory 30">
+        <div class="slide-caption">Our Little World! 🌍</div>
+      </div>
+
+      <div class="slide">
+        <img src="assets/slide31.jpg" alt="Special Memory 31">
+        <div class="slide-caption">Making Each Day Special! 🥳</div>
+      </div>
+
+      <div class="slide">
+        <img src="assets/slide32.jpg" alt="Special Memory 32">
+        <div class="slide-caption">Smiles All Around! 😁</div>
+      </div>
+
+      <div class="slide">
+        <img src="assets/slide33.jpg" alt="Special Memory 33">
+        <div class="slide-caption">Memories That Last Forever! 💌</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+      
+      <button class="slide-btn prev" onclick="changeSlide(-1)">❮</button>
+      <button class="slide-btn next" onclick="changeSlide(1)">❯</button>
+      
+      <div class="slide-controls">
+        <button class="btn btn-secondary" onclick="toggleSlideshow()">▶️ Start Slideshow</button>
+        <button class="btn btn-primary" onclick="toggleSlideshowMusic()">🎵 Play Slideshow Song</button>
+      </div>
+      
+      <audio id="slideshowAudio" src="assets/slideshow-song.mp3" loop></audio>
+    </div>
+  </section>
+
+  <hr class="section-divider">
+
+  <!-- Hidden Special Message -->
+  <div class="hidden-message-trigger" onclick="showHiddenMessage()">
+    <div class="mystery-box">
+      <div class="mystery-icon">🎁</div>
+      <div class="mystery-text">Tap for a Special Surprise!</div>
+    </div>
+  </div>
+
+  <!-- Hidden Message Modal -->
+  <div class="hidden-message-modal" id="hiddenMessageModal">
+    <div class="hidden-message-content">
+      <button class="close-btn" onclick="closeHiddenMessage()">×</button>
+      <h2>💝 A Very Special Message Just for Mahi! 💝</h2>
+      <div class="special-image">
+        <img src="assets/special-msg.jpg" alt="Special Memory Image" id="apiImage">
+      </div>
+      <div class="message-text">
+        <p id="apiCaption" class="image-caption"></p>
+        <p>🌟 Dear Mahi, you are absolutely amazing! 🌟</p>
+        <p>Your smile lights up every room you enter, and your kindness touches everyone around you. On this special day, I want you to know how much you mean to all of us.</p>
+        <p>May this new year bring you endless happiness, exciting adventures, and all the dreams you've been hoping for! 🎂✨</p>
+        <p><strong>Happy Birthday, wonderful soul! 💖</strong></p>
+      </div>
+    </div>
+  </div>
+
   <section class="memories">
-
     <div class="memory">
-      <img src="assets/mem1.jpg" alt="Memory 1">
-      <button onclick="playMemorySong(1)">Play Song 1</button>
+      <img src="assets/mem1.jpg" alt="Beautiful Memory 1" onclick="openPhotoModal(this)">
+      <h3>🌟 Special Moment #1</h3>
+      <p>This memory holds a special place in our hearts. Every time we look at this, it brings back those beautiful moments we shared together!</p>
+      <button class="btn btn-secondary" onclick="playMemorySong(1)">🎶 Play Memory Song</button>
       <audio id="memoryAudio1" src="assets/song1.mp3"></audio>
     </div>
 
     <div class="memory">
-      <img src="assets/mem2.jpg" alt="Memory 2">
-      <button onclick="playMemorySong(2)">Play Song 2</button>
+      <img src="assets/mem2.jpg" alt="Beautiful Memory 2" onclick="openPhotoModal(this)">
+      <h3>💖 Special Moment #2</h3>
+      <p>Another unforgettable moment that makes us smile every time! These are the memories that make life so wonderful and meaningful.</p>
+      <button class="btn btn-secondary" onclick="playMemorySong(2)">🎶 Play Memory Song</button>
       <audio id="memoryAudio2" src="assets/song2.mp3"></audio>
     </div>
 
     <div class="memory">
-      <img src="assets/mem3.jpg" alt="Memory 3">
-      <button onclick="playMemorySong(3)">Play Song 3</button>
+      <img src="assets/mem3.jpg" alt="Beautiful Memory 3" onclick="openPhotoModal(this)">
+      <h3>✨ Special Moment #3</h3>
+      <p>This moment captures the essence of our friendship perfectly. It's memories like these that remind us how lucky we are to have each other!</p>
+      <button class="btn btn-secondary" onclick="playMemorySong(3)">🎶 Play Memory Song</button>
       <audio id="memoryAudio3" src="assets/song3.mp3"></audio>
     </div>
-
-    <hr style="margin: 50px 0; border-color: hotpink;">
-
-    <!-- 🎬 Videos -->
-    <div class="videos">
-      <video src="assets/video1.mp4" controls></video>
-      <video src="assets/video2.mp4" controls></video>
-      <video src="assets/video3.mp4" controls></video>
-    </div>
-
   </section>
+
+  <div class="wish-message">
+    <h2>💝 A Special Birthday Wish for Mahi</h2>
+    <p>"On your special day, I want you to know how grateful I am to have you in my life. You bring so much joy, laughter, and happiness wherever you go. May this new year of your life be filled with amazing adventures, beautiful moments, and all the success you deserve. Happy Birthday, dear friend! 🎂✨"</p>
+  </div>
+
+  <hr class="section-divider">
+
+  <section class="videos-section">
+    <h2>🎬 Special Video Memories</h2>
+    <div class="videos">
+      <div class="video-container">
+        <video src="assets/video1.mp4" controls onplay="pauseOtherMedia(this)"></video>
+      </div>
+      <div class="video-container">
+        <video src="assets/video2.mp4" controls onplay="pauseOtherMedia(this)"></video>
+      </div>
+      <div class="video-container">
+        <video src="assets/video3.mp4" controls onplay="pauseOtherMedia(this)"></video>
+      </div>
+    </div>
+  </section>
+
+  <!-- Music Player Widget -->
+  <div class="music-player" id="musicPlayer">
+    <span id="nowPlaying">🎵 Now Playing...</span>
+    <button onclick="stopAllMedia()" style="background:none; border:none; font-size:1.5rem; cursor:pointer; color: #ff69b4;">⏹️</button>
+  </div>
+
+  <!-- Photo Modal -->
+  <div class="photo-modal" id="photoModal" onclick="closePhotoModal()">
+    <img id="modalImage" src="" alt="Full Size Photo">
+  </div>
 
   <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
   <script src="script.js"></script>
