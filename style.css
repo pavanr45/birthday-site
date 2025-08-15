@@ -417,6 +417,102 @@ h1 {
   }
 }
 
+.hidden-message-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.85);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+.hidden-message-modal.show {
+  display: flex;
+  opacity: 1;
+}
+
+/* Rain Effect */
+.rain {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 1;
+}
+.rain span {
+  position: absolute;
+  bottom: 100%;
+  width: 2px;
+  height: 60px;
+  background: rgba(255,255,255,0.5);
+  animation: rainDrop linear infinite;
+}
+@keyframes rainDrop {
+  0% { transform: translateY(0); opacity: 1; }
+  100% { transform: translateY(120vh); opacity: 0; }
+}
+
+/* Content */
+.hidden-message-content {
+  position: relative;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 20px;
+  border-radius: 20px;
+  width: 90%;
+  max-width: 450px;
+  z-index: 2;
+  animation: modalAppear 0.5s ease-out;
+}
+@keyframes modalAppear {
+  from { transform: scale(0.8) translateY(30px); opacity: 0; }
+  to { transform: scale(1) translateY(0); opacity: 1; }
+}
+.close-btn {
+  background: transparent;
+  border: none;
+  font-size: 1.5rem;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  cursor: pointer;
+}
+
+/* Special Image */
+.special-image {
+  text-align: center;
+  margin-bottom: 15px;
+}
+.special-image img {
+  max-width: 100%;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+/* Chat Box Styling */
+.chat-box {
+  background: url('https://i.imgur.com/dl8oJso.png') center/cover;
+  padding: 15px;
+  border-radius: 15px;
+  max-height: 40vh;
+  overflow-y: auto;
+}
+.msg {
+  padding: 10px 14px;
+  border-radius: 15px;
+  margin: 8px 0;
+  max-width: 80%;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+.msg.received {
+  background: #e5ddd5;
+  align-self: flex-start;
+  border-bottom-left-radius: 0;
+}
+
+
 .special-image {
   text-align: center;
   margin: 20px 0;
@@ -659,4 +755,78 @@ h1 {
   justify-content: center;
   align-items: center;
   z-index: 2000;
-  cursor:
+  cursor: pointer;
+}
+/* Balloons Animation */
+.balloon {
+  position: fixed;
+  bottom: -100px;
+  font-size: 3rem;
+  animation: floatBalloon 10s linear infinite;
+  z-index: 500;
+  pointer-events: none;
+}
+
+@keyframes floatBalloon {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-110vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+
+.footer {
+  text-align: center;
+  padding: 20px;
+  font-size: 1.2rem;
+  color: white;
+  text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+  background: rgba(0, 0, 0, 0.2);
+  border-top: 2px solid var(--primary-color);
+  margin-top: 50px;
+}
+.hidden-message-content {
+  text-align: center;
+}
+
+.special-image img {
+  max-width: 100%;
+  border-radius: 15px;
+  margin-bottom: 15px; /* gap below image */
+}
+
+.music-btn-container {
+  margin-bottom: 20px; /* gap below music button */
+}
+
+.music-btn {
+  padding: 8px 15px;
+  font-size: 14px;
+  background: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.music-btn:hover {
+  background: var(--secondary-color);
+}
+
+.special-text {
+  font-size: 1.1em;
+  line-height: 1.5;
+  margin-top: 10px; /* slight space above text */
+}
+.gif-emoji {
+    width: 150px;
+    height: 150px;
+    vertical-align: middle;
+    margin-left: 10px;
+    border-radius: 8px;
+}

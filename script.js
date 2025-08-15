@@ -365,6 +365,25 @@ function loadAPIImage() {
   };
 }
 
+function createRain() {
+  const rainLayer = document.getElementById('rainLayer');
+  rainLayer.innerHTML = '';
+  for (let i = 0; i < 40; i++) {
+    const drop = document.createElement('span');
+    drop.style.left = `${Math.random() * 100}%`;
+    drop.style.animationDuration = `${Math.random() * 1 + 0.5}s`;
+    drop.style.animationDelay = `${Math.random()}s`;
+    rainLayer.appendChild(drop);
+  }
+}
+
+function showHiddenMessage() {
+  document.getElementById('hiddenMessageModal').classList.add('show');
+  createRain();
+}
+function closeHiddenMessage() {
+  document.getElementById('hiddenMessageModal').classList.remove('show');
+}
 
 // Other Functions
 function createConfettiShow() {
@@ -449,3 +468,39 @@ setTimeout(() => {
     }
   }
 }, 5000);
+
+function createBalloons(count) {
+  const balloons = ['💖', '💕', '💝', '🎈', '✨', '🎉', '💗'];
+  
+  for (let i = 0; i < count; i++) {
+    setTimeout(() => {
+      const balloon = document.createElement('div');
+      balloon.className = 'balloon';
+      balloon.textContent = balloons[Math.floor(Math.random() * balloons.length)];
+      balloon.style.left = Math.random() * 100 + 'vw';
+      balloon.style.animationDuration = (Math.random() * 5 + 5) + 's';
+      document.body.appendChild(balloon);
+
+      setTimeout(() => balloon.remove(), 10000);
+    }, i * 300);
+  }
+}
+
+// Trigger balloons every 10 seconds
+setInterval(() => createBalloons(8), 10000);
+
+// Music Play/Pause
+const musicBtn = document.getElementById("musicBtn");
+const specialSong = document.getElementById("specialSong");
+let isMusicPlaying = false;
+
+musicBtn.addEventListener("click", () => {
+  if (isMusicPlaying) {
+    specialSong.pause();
+    musicBtn.textContent = "🎵 Play";
+  } else {
+    specialSong.play();
+    musicBtn.textContent = "⏸ Pause";
+  }
+  isMusicPlaying = !isMusicPlaying;
+});

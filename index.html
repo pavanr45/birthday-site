@@ -17,12 +17,23 @@
     <button onclick="changeTheme('rainbow')" class="theme-btn rainbow-theme">🌈</button>
   </div>
 
-  <h1>🎂 Happy Birthday Mahi! 🎂</h1>
+  <h1>🎂 Happy Birthday Madamji! 🤗❤️ 🎂</h1>
 
   <div class="birthday-intro">
-    <h2>🎉 Welcome to Your Special Day! 🎉</h2>
-    <p>Today is all about celebrating YOU! Get ready for an amazing journey through our beautiful memories together. Make a wish and blow out the candle! ✨</p>
-  </div>
+    <h2>
+        🎉 Welcome to Your Special Day! 🎉 
+        <img src="assets/birthday.gif" 
+             alt="Birthday Celebration" 
+             class="gif-emoji">
+    </h2>
+    <p>
+        Today is all about celebrating YOU! 
+        Get ready for an amazing journey through our beautiful memories together. 
+        Make a wish and blow out the candle! ✨
+    </p>
+</div>
+
+
 
   <div class="candle" onclick="blowCandle()">
     <img src="assets/cake.jpg" alt="Birthday Cake" class="candle-img">
@@ -37,6 +48,8 @@
 
   <audio id="birthdayAudio" src="assets/happy-birthday.mp3" loop></audio>
   <audio id="blowAudio" src="assets/blow.mp3"></audio>
+
+<hr class="section-divider">
 
  <!-- Special Slideshow Memories Section -->
 <section class="slideshow-memories">
@@ -234,37 +247,59 @@
 
   <hr class="section-divider">
 
-  <!-- Hidden Special Message -->
-  <div class="hidden-message-trigger" onclick="showHiddenMessage()">
-    <div class="mystery-box">
-      <div class="mystery-icon">🎁</div>
-      <div class="mystery-text">Tap for a Special Surprise!</div>
-    </div>
+  <!-- Hidden Special Message Trigger -->
+<div class="hidden-message-trigger" onclick="showHiddenMessage()">
+  <div class="mystery-box">
+    <div class="mystery-icon">🎁</div>
+    <div class="mystery-text">Tap for a Special Surprise!</div>
   </div>
+</div>
 
-  <!-- Hidden Message Modal -->
-  <div class="hidden-message-modal" id="hiddenMessageModal">
-    <div class="hidden-message-content">
-      <button class="close-btn" onclick="closeHiddenMessage()">×</button>
-      <h2>💝 A Very Special Message Just for Mahi! 💝</h2>
-      <div class="special-image">
-        <img src="assets/special-msg.jpg" alt="Special Memory Image" id="apiImage">
-      </div>
-      <div class="message-text">
-        <p id="apiCaption" class="image-caption"></p>
-        <p>🌟 Dear Mahi, you are absolutely amazing! 🌟</p>
-        <p>Your smile lights up every room you enter, and your kindness touches everyone around you. On this special day, I want you to know how much you mean to all of us.</p>
-        <p>May this new year bring you endless happiness, exciting adventures, and all the dreams you've been hoping for! 🎂✨</p>
-        <p><strong>Happy Birthday, wonderful soul! 💖</strong></p>
-      </div>
+<!-- Hidden Special Message Modal -->
+<div class="hidden-message-modal" id="hiddenMessageModal">
+  <!-- Rain Layer -->
+  <div class="rain" id="rainLayer"></div>
+
+  <div class="hidden-message-content">
+    <button class="close-btn" onclick="closeHiddenMessage()">×</button>
+    <h2>💌 A Very Special Message Just for Mahi 💌</h2>
+
+    <!-- Special Image -->
+    <div class="special-image">
+      <img src="assets/special-msg.jpg" alt="Special Memory Image">
+    </div>
+
+    <!-- Music Control Button -->
+    <div class="music-btn-container">
+      <button id="musicBtn" class="music-btn">🎵 Play</button>
+    </div>
+
+    <!-- Background Song -->
+    <audio id="specialSong" src="assets/song.mp3" preload="auto" loop></audio>
+
+    <!-- Special Text -->
+    <div class="special-text">
+      <p>
+        "Har pal tumhari muskaan meri duniya roshan karti hai,<br>
+        tum meri zindagi ka wo hissa ho jo kabhi khatam na ho...<br>
+        I love you more than words can say ❤️"
+      </p>
     </div>
   </div>
+</div>
+
+
+<hr class="section-divider">
+
 
   <section class="memories">
     <div class="memory">
       <img src="assets/mem1.jpg" alt="Beautiful Memory 1" onclick="openPhotoModal(this)">
       <h3>🌟 Special Moment #1</h3>
-      <p>This memory holds a special place in our hearts. Every time we look at this, it brings back those beautiful moments we shared together!</p>
+      <p>आखों की नज़र से नहीं,
+हम दिल की नज़र से प्यार करते है..
+आप दिखे या न दिखे फिर भी,
+हम आपका दीदार करते है.</p>
       <button class="btn btn-secondary" onclick="playMemorySong(1)">🎶 Play Memory Song</button>
       <audio id="memoryAudio1" src="assets/song1.mp3"></audio>
     </div>
@@ -272,7 +307,10 @@
     <div class="memory">
       <img src="assets/mem2.jpg" alt="Beautiful Memory 2" onclick="openPhotoModal(this)">
       <h3>💖 Special Moment #2</h3>
-      <p>Another unforgettable moment that makes us smile every time! These are the memories that make life so wonderful and meaningful.</p>
+      <p>बहुत चाहा मगर उन्हें भुला न सके,
+खयालों में किसी और को ला न सके,
+उसको देख के आँसू तो पोंछ लिए मगर,
+किसी और को देख के मुस्करा न सके.</p>
       <button class="btn btn-secondary" onclick="playMemorySong(2)">🎶 Play Memory Song</button>
       <audio id="memoryAudio2" src="assets/song2.mp3"></audio>
     </div>
@@ -280,16 +318,13 @@
     <div class="memory">
       <img src="assets/mem3.jpg" alt="Beautiful Memory 3" onclick="openPhotoModal(this)">
       <h3>✨ Special Moment #3</h3>
-      <p>This moment captures the essence of our friendship perfectly. It's memories like these that remind us how lucky we are to have each other!</p>
+      <p>इश्क़ की बारिश में भीगने का मज़ा ही और है, जब तू साथ हो, तो हर लम्हा गुलज़ार है।</p>
       <button class="btn btn-secondary" onclick="playMemorySong(3)">🎶 Play Memory Song</button>
       <audio id="memoryAudio3" src="assets/song3.mp3"></audio>
     </div>
   </section>
 
-  <div class="wish-message">
-    <h2>💝 A Special Birthday Wish for Mahi</h2>
-    <p>"On your special day, I want you to know how grateful I am to have you in my life. You bring so much joy, laughter, and happiness wherever you go. May this new year of your life be filled with amazing adventures, beautiful moments, and all the success you deserve. Happy Birthday, dear friend! 🎂✨"</p>
-  </div>
+
 
   <hr class="section-divider">
 
@@ -321,6 +356,10 @@
 
   <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
   <script src="script.js"></script>
+
+  <footer class="footer">
+  <p>🎁 From <strong>PR</strong> → This Website 🎉</p>
+</footer>
 
 </body>
 </html>
