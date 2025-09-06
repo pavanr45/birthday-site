@@ -22,6 +22,18 @@
   text-transform: uppercase;
   letter-spacing: 2px;
 }
+/* Theme Buttons */
+.theme-selector {
+  display: flex;
+  gap: 8px;
+}
+
+.theme-btn {
+  border: none;
+  background: transparent;
+  font-size: 20px;
+  cursor: pointer;
+}
 /* Hamburger Icon */
 .hamburger {
   display: none;
