@@ -590,3 +590,6 @@ function closeSpecialSurprise() {
   const modal = document.getElementById("specialSurpriseModal");
   modal.classList.remove("show");
 }
+function toggleMenu() {
+  document.getElementById("menu").classList.toggle("show");
+}

@@ -22,6 +22,12 @@
   text-transform: uppercase;
   letter-spacing: 2px;
 }
+/* Hamburger Icon */
+.hamburger {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+}
 
 
 
@@ -39,9 +45,16 @@
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.2);
   }
+.theme-selector.show {
+    display: flex; /* toggle hone par show hoga */
+  }
 
-  
+  .hamburger {
+    display: block; /* sirf mobile par visible */
+  }
 }
+
+
 
 * {
   margin: 0;
