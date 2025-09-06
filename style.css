@@ -24,6 +24,25 @@
 }
 
 
+
+/* 📱 Mobile Responsive */
+@media (max-width: 600px) {
+  .theme-selector {
+    display: none; /* default hidden */
+    flex-direction: column;
+    gap: 10px;
+    background: #f9f9f9;
+    position: absolute;
+    top: 50px;
+    right: 20px;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  }
+
+  
+}
+
 * {
   margin: 0;
   padding: 0;

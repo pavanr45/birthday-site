@@ -8,22 +8,24 @@
 </head>
 <body>
 <!-- Top Navigation Bar -->
-<div class="navbar">
+<nav class="navbar">
   <div class="navbar-left">
     🎉 Birthday Website
   </div>
-</div>
 
-<hr class="section-divider">
 
-  <!-- Theme Selector -->
-  <div class="theme-selector">
+  <!-- Right side theme buttons -->
+  <div class="navbar-right theme-selector" id="menu">
     <button onclick="changeTheme('pink')" class="theme-btn pink-theme">💖</button>
     <button onclick="changeTheme('blue')" class="theme-btn blue-theme">💙</button>
     <button onclick="changeTheme('purple')" class="theme-btn purple-theme">💜</button>
     <button onclick="changeTheme('green')" class="theme-btn green-theme">💚</button>
     <button onclick="changeTheme('rainbow')" class="theme-btn rainbow-theme">🌈</button>
   </div>
+</nav>
+
+
+<hr class="section-divider">
 
   <h1>🎂 Happy Birthday Madamji! 🤗❤️ 🎂</h1>
 
@@ -335,10 +337,7 @@
 <section id="slideshow">
   <div class="slideshow-container">
     
-    <!-- Slide Navigation Buttons -->
-    <button class="slide-btn prev" onclick="changeSlide(-1)">❮</button>
-    <button class="slide-btn next" onclick="changeSlide(1)">❯</button>
-
+    
     <!-- Slideshow Control Buttons -->
     <div class="slide-controls">
       <button class="btn btn-secondary" onclick="toggleSlideshow()">▶️ Start Slideshow</button>
@@ -387,46 +386,6 @@
 </div>
 
 
-
-<!-- Mystery Box 2: Special Message -->
-<div class="hidden-message-trigger" onclick="showHiddenMessage()">
-  <div class="mystery-box">
-    <div class="mystery-icon">💌</div>
-    <div class="mystery-text">Tap for a Special Message!</div>
-  </div>
-</div>
-
-<!-- Modal: Special Message -->
-<div class="hidden-message-modal" id="hiddenMessageModal">
-  <!-- Rain Layer -->
-  <div class="rain" id="rainLayer"></div>
-
-  <div class="hidden-message-content">
-    <button class="close-btn" onclick="closeHiddenMessage()">×</button>
-    <h2>💌 A Very Special Message Just for You 💌</h2>
-
-    <!-- Special Image -->
-    <div class="special-image">
-      <img src="assets/special-msg.jpg" alt="Special Memory Image">
-    </div>
-
-    <!-- Music Control Button -->
-    <div class="music-btn-container">
-      <button id="musicBtn" class="music-btn">🎵 Play</button>
-    </div>
-
-    <!-- Background Song -->
-    <audio id="specialSong" src="assets/song.mp3" preload="auto" loop></audio>
-
-    <!-- Special Text -->
-    <div class="special-text">
-      <p>
-        " Wo kya he na bas Aap hi nhi ho jo ye feel karte ho.
-         Hm bhi he jo ye feel karte hain ❤️ ."
-      </p>
-    </div>
-  </div>
-</div>
 
 
 <hr class="section-divider">
