@@ -7,6 +7,14 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<!-- Top Navigation Bar -->
+<div class="navbar">
+  <div class="navbar-left">
+    🎉 Birthday Website
+  </div>
+</div>
+
+<hr class="section-divider">
 
   <!-- Theme Selector -->
   <div class="theme-selector">
@@ -19,21 +27,29 @@
 
   <h1>🎂 Happy Birthday Madamji! 🤗❤️ 🎂</h1>
 
-  <div class="birthday-intro">
-    <h2>
-        🎉 Welcome to Your Special Day! 🎉 
-        <img src="assets/birthday.gif" 
-             alt="Birthday Celebration" 
-             class="gif-emoji">
-    </h2>
-    <p>
-        Today is all about celebrating YOU! 
-        Get ready for an amazing journey through our beautiful memories together. 
-        Make a wish and blow out the candle! ✨
-    </p>
+ <div class="birthday-intro">
+  <h2>
+    🎉 Welcome to Your Special Day! 🎉 
+    <img src="assets/birthday.gif" 
+         alt="Birthday Celebration" 
+         class="gif-emoji">
+  </h2>
+  <p>
+    Today is all about celebrating YOU! 
+    Get ready for an amazing journey through our beautiful memories together. 
+    Make a wish and blow out the candle! ✨
+  </p>
+
+  <!-- 🎁 Small Gift Box Button -->
+  <div class="gift-box">
+    <a href="https://gifft.me/o/d/zbzmctl6jl01lnvppwrr0fnb" target="_blank">
+      🎁 Plz Tap Here First ❤️
+    </a>
+  </div>
 </div>
 
 
+<hr class="section-divider">
 
   <div class="candle" onclick="blowCandle()">
     <img src="assets/cake.jpg" alt="Birthday Cake" class="candle-img">
@@ -228,41 +244,166 @@
         <div class="slide-caption">Memories That Last Forever! 💌</div>
       </div>
 
+            <div class="slide">
+        <img src="assets/slide34.jpg" alt="Special Memory 34">
+        <div class="slide-caption">Your Smile is My Sunshine ☀️</div>
+      </div>
+
+      <div class="slide">
+        <img src="assets/slide35.jpg" alt="Special Memory 35">
+        <div class="slide-caption">Unforgettable Moments 💖</div>
+      </div>
+
+      <div class="slide">
+        <img src="assets/slide36.jpg" alt="Special Memory 36">
+        <div class="slide-caption">Every Step Together 🚶‍♂️🚶‍♀️</div>
+      </div>
+
+      <div class="slide">
+        <img src="assets/slide37.jpg" alt="Special Memory 37">
+        <div class="slide-caption">Pure Happiness 😍</div>
+      </div>
+
+      <div class="slide">
+        <img src="assets/slide38.jpg" alt="Special Memory 38">
+        <div class="slide-caption">You Make Life Beautiful 🌸</div>
+      </div>
+
+      <div class="slide">
+        <img src="assets/slide39.jpg" alt="Special Memory 39">
+        <div class="slide-caption">Our Crazy Adventures ✈️</div>
+      </div>
+
+      <div class="slide">
+        <img src="assets/slide40.jpg" alt="Special Memory 40">
+        <div class="slide-caption">Always in My Heart ❤️</div>
+      </div>
+
+      <div class="slide">
+        <img src="assets/slide41.jpg" alt="Special Memory 41">
+        <div class="slide-caption">Laughter is Our Language 😂</div>
+      </div>
+
+      <div class="slide">
+        <img src="assets/slide42.jpg" alt="Special Memory 42">
+        <div class="slide-caption">Beautiful Inside & Out 🌹</div>
+      </div>
+
+      <div class="slide">
+        <img src="assets/slide43.jpg" alt="Special Memory 43">
+        <div class="slide-caption">Partners in Every Dream 🌙</div>
+      </div>
+
+      <div class="slide">
+        <img src="assets/slide44.jpg" alt="Special Memory 44">
+        <div class="slide-caption">Sweetest Memories 🍭</div>
+      </div>
+
+      <div class="slide">
+        <img src="assets/slide45.jpg" alt="Special Memory 45">
+        <div class="slide-caption">Forever My Favorite Person 💕</div>
+      </div>
+
+      <div class="slide">
+        <img src="assets/slide46.jpg" alt="Special Memory 46">
+        <div class="slide-caption">Moments Full of Magic ✨</div>
+      </div>
+
+      <div class="slide">
+        <img src="assets/slide47.jpg" alt="Special Memory 47">
+        <div class="slide-caption">My Safe Place 🏡</div>
+      </div>
+
+      <div class="slide">
+        <img src="assets/slide48.jpg" alt="Special Memory 48">
+        <div class="slide-caption">Adventures With You 🌄</div>
+      </div>
+
+      <div class="slide">
+        <img src="assets/slide49.jpg" alt="Special Memory 49">
+        <div class="slide-caption">Game We Share 🌠</div>
+      </div>
+
+      <div class="slide">
+        <img src="assets/slide50.jpg" alt="Special Memory 50">
+        <div class="slide-caption">Forever & Always 💍</div>
+      </div>
+
     </div>
   </div>
 </section>
+<section id="slideshow">
+  <div class="slideshow-container">
+    
+    <!-- Slide Navigation Buttons -->
+    <button class="slide-btn prev" onclick="changeSlide(-1)">❮</button>
+    <button class="slide-btn next" onclick="changeSlide(1)">❯</button>
 
-      
-      <button class="slide-btn prev" onclick="changeSlide(-1)">❮</button>
-      <button class="slide-btn next" onclick="changeSlide(1)">❯</button>
-      
-      <div class="slide-controls">
-        <button class="btn btn-secondary" onclick="toggleSlideshow()">▶️ Start Slideshow</button>
-        <button class="btn btn-primary" onclick="toggleSlideshowMusic()">🎵 Play Slideshow Song</button>
-      </div>
-      
-      <audio id="slideshowAudio" src="assets/slideshow-song.mp3" loop></audio>
+    <!-- Slideshow Control Buttons -->
+    <div class="slide-controls">
+      <button class="btn btn-secondary" onclick="toggleSlideshow()">▶️ Start Slideshow</button>
+      <button class="btn btn-primary" onclick="toggleSlideshowMusic()">🎵 Play Slideshow Song</button>
     </div>
-  </section>
 
-  <hr class="section-divider">
+    <!-- Audio -->
+    <audio id="slideshowAudio" src="assets/slideshow-song.mp3" loop></audio>
 
-  <!-- Hidden Special Message Trigger -->
-<div class="hidden-message-trigger" onclick="showHiddenMessage()">
+  </div>
+</section>
+
+<hr class="section-divider">
+
+
+ <!-- Mystery Box 1: Special Surprise -->
+<div class="hidden-message-trigger" onclick="showSpecialSurprise()">
   <div class="mystery-box">
-    <div class="mystery-icon">🎁</div>
+    <div class="mystery-icon">🎉</div>
     <div class="mystery-text">Tap for a Special Surprise!</div>
   </div>
 </div>
 
-<!-- Hidden Special Message Modal -->
+<!-- Modal: Special Surprise -->
+<div class="hidden-message-modal" id="specialSurpriseModal">
+  <div class="hidden-message-content">
+    <button class="close-btn" onclick="closeSpecialSurprise()">×</button>
+    <h2>🎁 A Special Surprise for You 🎁</h2>
+
+    <!-- Surprise Button -->
+    <div class="special-surprise">
+      <a href="https://gifft.me/o/hm/a64qbzbssvm1qprmc557blvr" 
+         target="_blank" 
+         class="surprise-btn">
+        🎁 Open Your Surprise
+      </a>
+    </div>
+
+    <div class="special-text">
+      <p>
+        "Life with you is full of surprises 🌸  
+        Here’s one more to make your day extra special! 💕"
+      </p>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- Mystery Box 2: Special Message -->
+<div class="hidden-message-trigger" onclick="showHiddenMessage()">
+  <div class="mystery-box">
+    <div class="mystery-icon">💌</div>
+    <div class="mystery-text">Tap for a Special Message!</div>
+  </div>
+</div>
+
+<!-- Modal: Special Message -->
 <div class="hidden-message-modal" id="hiddenMessageModal">
   <!-- Rain Layer -->
   <div class="rain" id="rainLayer"></div>
 
   <div class="hidden-message-content">
     <button class="close-btn" onclick="closeHiddenMessage()">×</button>
-    <h2>💌 A Very Special Message Just for Mahi 💌</h2>
+    <h2>💌 A Very Special Message Just for You 💌</h2>
 
     <!-- Special Image -->
     <div class="special-image">
@@ -280,9 +421,8 @@
     <!-- Special Text -->
     <div class="special-text">
       <p>
-        "Har pal tumhari muskaan meri duniya roshan karti hai,<br>
-        tum meri zindagi ka wo hissa ho jo kabhi khatam na ho...<br>
-        I love you more than words can say ❤️"
+        " Wo kya he na bas Aap hi nhi ho jo ye feel karte ho.
+         Hm bhi he jo ye feel karte hain ❤️ ."
       </p>
     </div>
   </div>
@@ -299,7 +439,7 @@
       <p>आखों की नज़र से नहीं,
 हम दिल की नज़र से प्यार करते है..
 आप दिखे या न दिखे फिर भी,
-हम आपका दीदार करते है.</p>
+हम आपका दीदार करते है 💖.</p>
       <button class="btn btn-secondary" onclick="playMemorySong(1)">🎶 Play Memory Song</button>
       <audio id="memoryAudio1" src="assets/song1.mp3"></audio>
     </div>
@@ -307,10 +447,10 @@
     <div class="memory">
       <img src="assets/mem2.jpg" alt="Beautiful Memory 2" onclick="openPhotoModal(this)">
       <h3>💖 Special Moment #2</h3>
-      <p>बहुत चाहा मगर उन्हें भुला न सके,
-खयालों में किसी और को ला न सके,
-उसको देख के आँसू तो पोंछ लिए मगर,
-किसी और को देख के मुस्करा न सके.</p>
+      <p>तेरे जन्मदिन पर यही तोहफा है खास,
+पार्टी दे दे जल्दी, वरना करेंगे हम बकवास,
+खाली "Thanks" से काम नहीं चलेगा,
+Pizza, Burger और Cold Drink भी मंगवाना पड़ेगा 😂🍕🥤</p>
       <button class="btn btn-secondary" onclick="playMemorySong(2)">🎶 Play Memory Song</button>
       <audio id="memoryAudio2" src="assets/song2.mp3"></audio>
     </div>
@@ -318,7 +458,10 @@
     <div class="memory">
       <img src="assets/mem3.jpg" alt="Beautiful Memory 3" onclick="openPhotoModal(this)">
       <h3>✨ Special Moment #3</h3>
-      <p>इश्क़ की बारिश में भीगने का मज़ा ही और है, जब तू साथ हो, तो हर लम्हा गुलज़ार है।</p>
+      <p>"दुआ है कि तू जहाँ भी जाए,
+हर कदम पे खुशियाँ पाए,
+तेरे Birthday पर ये अरमान है,
+तेरा चेहरा हमेशा हंसता हुआ नज़र आए 💕"</p>
       <button class="btn btn-secondary" onclick="playMemorySong(3)">🎶 Play Memory Song</button>
       <audio id="memoryAudio3" src="assets/song3.mp3"></audio>
     </div>
@@ -357,9 +500,15 @@
   <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
   <script src="script.js"></script>
 
-  <footer class="footer">
-  <p>🎁 From <strong>PR</strong> → This Website 🎉</p>
-</footer>
+<hr class="section-divider">
+
+ <footer class="footer">
+    <div class="footer-content">
+      <p>🎁 Made with ❤️ for Madamji by PR 🎉</p>
+      <p class="small-text">✨ Forever in memories &amp; love ✨</p>
+    </div>
+  </footer>
+
 
 </body>
 </html>
