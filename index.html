@@ -8,16 +8,17 @@
 </head>
 <body>
 <!-- Top Navigation Bar -->
+<!-- Top Navigation Bar -->
 <nav class="navbar">
   <div class="navbar-left">
     🎉 Birthday Website
   </div>
 
   <!-- Hamburger Icon (only mobile me dikhega) -->
-  <div class="hamburger" onclick="toggleMenu()">☰</div>
+  <div class="hamburger">☰</div>
 
   <!-- Right side theme buttons -->
-  <div class="navbar-right theme-selector" id="menu">
+  <div class="navbar-right theme-selector">
     <button onclick="changeTheme('pink')" class="theme-btn pink-theme">💖</button>
     <button onclick="changeTheme('blue')" class="theme-btn blue-theme">💙</button>
     <button onclick="changeTheme('purple')" class="theme-btn purple-theme">💜</button>
@@ -25,6 +26,16 @@
     <button onclick="changeTheme('rainbow')" class="theme-btn rainbow-theme">🌈</button>
   </div>
 </nav>
+
+<script>
+  const hamburger = document.querySelector(".hamburger");
+  const themeMenu = document.querySelector(".theme-selector");
+
+  hamburger.addEventListener("click", () => {
+    themeMenu.classList.toggle("show");
+  });
+</script>
+
 
 
 <hr class="section-divider">

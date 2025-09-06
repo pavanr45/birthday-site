@@ -47,26 +47,21 @@
 /* 📱 Mobile Responsive */
 @media (max-width: 600px) {
   .theme-selector {
-    display: none; /* default hidden */
+    display: none;
     flex-direction: column;
     gap: 10px;
-    background: #fff; /* thoda contrast */
-    position: fixed;  /* absolute ki jagah fixed */
-    top: 60px;        /* navbar ke niche */
+    background: #fff;
+    position: fixed;
+    top: 60px;
     right: 20px;
     padding: 12px;
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-    z-index: 1000;    /* sab upar dikhne ke liye */
-    transition: transform 0.3s ease, opacity 0.3s ease;
-    opacity: 0;
-    transform: scale(0.9);
+    z-index: 1000;
   }
 
   .theme-selector.show {
     display: flex;
-    opacity: 1;
-    transform: scale(1); /* smooth popup jaisa effect */
   }
 
   .hamburger {
@@ -77,6 +72,7 @@
     cursor: pointer;
   }
 }
+
 
 
 
