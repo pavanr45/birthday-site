@@ -44,28 +44,40 @@
 }
 
 /* 📱 Mobile Responsive */
+/* 📱 Mobile Responsive */
 @media (max-width: 600px) {
   .theme-selector {
     display: none; /* default hidden */
     flex-direction: column;
     gap: 10px;
-    background: #f9f9f9;
-    position: absolute;
-    top: 60px;   /* navbar ke niche */
+    background: #fff; /* thoda contrast */
+    position: fixed;  /* absolute ki jagah fixed */
+    top: 60px;        /* navbar ke niche */
     right: 20px;
-    padding: 10px;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    padding: 12px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    z-index: 1000;    /* sab upar dikhne ke liye */
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    opacity: 0;
+    transform: scale(0.9);
   }
 
   .theme-selector.show {
-    display: flex; /* toggle hone par show hoga */
+    display: flex;
+    opacity: 1;
+    transform: scale(1); /* smooth popup jaisa effect */
   }
 
   .hamburger {
-    display: block; /* sirf mobile par dikhega */
+    display: block;
+    font-size: 26px;
+    background: none;
+    border: none;
+    cursor: pointer;
   }
 }
+
 
 
 

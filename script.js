@@ -590,6 +590,9 @@ function closeSpecialSurprise() {
   const modal = document.getElementById("specialSurpriseModal");
   modal.classList.remove("show");
 }
-function toggleMenu() {
-  document.getElementById("menu").classList.toggle("show");
-}
+const hamburger = document.querySelector(".hamburger");
+const themeMenu = document.querySelector(".theme-selector");
+
+hamburger.addEventListener("click", () => {
+  themeMenu.classList.toggle("show");
+});
