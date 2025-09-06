@@ -13,28 +13,18 @@
   <div class="navbar-left">
     🎉 Birthday Website
   </div>
-
-  <!-- Hamburger Icon (only mobile me dikhega) -->
-  <div class="hamburger">☰</div>
-
-  <!-- Right side theme buttons -->
-  <div class="navbar-right theme-selector">
-    <button onclick="changeTheme('pink')" class="theme-btn pink-theme">💖</button>
-    <button onclick="changeTheme('blue')" class="theme-btn blue-theme">💙</button>
-    <button onclick="changeTheme('purple')" class="theme-btn purple-theme">💜</button>
-    <button onclick="changeTheme('green')" class="theme-btn green-theme">💚</button>
-    <button onclick="changeTheme('rainbow')" class="theme-btn rainbow-theme">🌈</button>
-  </div>
 </nav>
 
-<script>
-  const hamburger = document.querySelector(".hamburger");
-  const themeMenu = document.querySelector(".theme-selector");
+<!-- Theme Selector (Title ke niche ek line me) -->
+<div class="theme-selector">
+  <button onclick="changeTheme('pink')" class="theme-btn pink-theme">💖</button>
+  <button onclick="changeTheme('blue')" class="theme-btn blue-theme">💙</button>
+  <button onclick="changeTheme('purple')" class="theme-btn purple-theme">💜</button>
+  <button onclick="changeTheme('green')" class="theme-btn green-theme">💚</button>
+  <button onclick="changeTheme('rainbow')" class="theme-btn rainbow-theme">🌈</button>
+</div>
 
-  hamburger.addEventListener("click", () => {
-    themeMenu.classList.toggle("show");
-  });
-</script>
+
 
 
 
